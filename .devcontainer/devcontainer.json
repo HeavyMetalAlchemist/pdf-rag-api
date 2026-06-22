@@ -1,0 +1,21 @@
+{
+    "name": "Document Intelligence API",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "api",
+    "workspaceFolder": "/app",
+    "forwardPorts": [8000, 16686, 4317],
+    "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.pylint",
+                "charliermarsh.ruff"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "editor.formatOnSave": true
+            }
+        }
+    }
+}

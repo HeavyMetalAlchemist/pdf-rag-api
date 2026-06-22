@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest tests/ -v
+        env:
+          # Dummy values — tests don't make real AWS calls
+          AWS_REGION: ap-northeast-1
+          AWS_ACCESS_KEY_ID: test-key-id
+          AWS_SECRET_ACCESS_KEY: test-secret-key
+          S3_BUCKET_NAME: test-bucket
+          S3_VECTOR_BUCKET_NAME: test-vector-bucket
+          S3_VECTOR_INDEX_NAME: test-index
+          BEDROCK_EMBEDDING_MODEL_ID: amazon.titan-embed-text-v2:0
+          BEDROCK_GENERATION_MODEL_ID: anthropic.claude-sonnet-4-5
+          CHUNK_SIZE: "512"
+          CHUNK_OVERLAP: "50"
+          TOP_K: "5"
+          OTEL_SERVICE_NAME: test-service
+          OTEL_EXPORTER_OTLP_ENDPOINT: http://localhost:4317
+          GENERATION_MAX_TOKENS: "1024"
+          GENERATION_TEMPERATURE: "0.0"

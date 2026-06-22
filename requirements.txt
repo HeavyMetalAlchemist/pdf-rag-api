@@ -1,0 +1,30 @@
+# API
+fastapi==0.115.12
+uvicorn[standard]==0.34.3
+python-multipart==0.0.20
+
+# AWS
+boto3==1.43.0
+
+# Config
+python-dotenv==1.0.1
+pydantic-settings==2.7.0
+
+# PDF parsing
+pymupdf==1.25.5
+
+# Text splitting
+langchain-text-splitters==0.3.8
+
+# Logging
+loguru==0.7.3
+
+# OpenTelemetry
+opentelemetry-api==1.30.0
+opentelemetry-sdk==1.30.0
+opentelemetry-exporter-otlp-proto-grpc==1.30.0
+opentelemetry-instrumentation-fastapi==0.51b0
+
+# Testing
+pytest==8.3.5
+httpx==0.28.1
