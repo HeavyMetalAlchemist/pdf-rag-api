@@ -1,5 +1,5 @@
 services:
-  api:
+  pdf-rag-api:
     build: .
     container_name: pdf-rag-api
     ports:

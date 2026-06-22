@@ -10,13 +10,13 @@ from src.api.routes import ingest, status, query, documents
 
 @asynccontextmanager
 async def lifespan(app):
-    logger.info("Starting Document Intelligence API")
+    logger.info("Starting PDF RAG API")
     yield
-    logger.info("Shutting down Document Intelligence API")
+    logger.info("Shutting down PDF RAG API")
 
 
 app = FastAPI(
-    title="Document Intelligence API",
+    title="PDF RAG API",
     description="RAG-based PDF ingestion and grounded document Q&A.",
     version="0.1.0",
     lifespan=lifespan,
