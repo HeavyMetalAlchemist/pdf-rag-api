@@ -84,7 +84,7 @@ Copy the example and fill in your values:
     cd terraform
     cp terraform.tfvars.example terraform.tfvars
 
-Populate terraform.tfvars with the necessary item names. Then run:
+Then run:
 
     terraform init
     terraform apply
@@ -111,7 +111,7 @@ Poll GET /status/{document_id} until status is ready.
 
 ### 5. Query
 
-Send a POST /query request with your question, and optionally a document_id.
+Send a POST /query request with your question, and optionally a document_id to scope the search to a specific document.
 
 ## How It Works
 
