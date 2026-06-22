@@ -57,10 +57,10 @@ Query pipeline showing embed_text, query_chunks, and generate_answer spans.
 ### Ingested Documents List
 ![Documents List](docs/screenshots/documents-list.png)
 
-### Query - Sherlock Holmes with Page Citations
+### Query with Page Citations # Example 1
 ![Query Sherlock](docs/screenshots/query-sherlock.png)
 
-### Query - S3 Security Best Practices
+### Query with Page Citations # Example 2
 ![Query S3](docs/screenshots/query-s3.png)
 
 ### Query - Grounding Working
@@ -84,7 +84,7 @@ Copy the example and fill in your values:
     cd terraform
     cp terraform.tfvars.example terraform.tfvars
 
-Then run:
+Populate terraform.tfvars with the necessary item names. Then run:
 
     terraform init
     terraform apply
@@ -111,7 +111,7 @@ Poll GET /status/{document_id} until status is ready.
 
 ### 5. Query
 
-Send a POST /query request with your document_id and question.
+Send a POST /query request with your question, and optionally a document_id.
 
 ## How It Works
 
