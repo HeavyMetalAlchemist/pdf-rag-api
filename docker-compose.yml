@@ -1,7 +1,7 @@
 services:
   api:
     build: .
-    container_name: document-intelligence-api
+    container_name: pdf-rag-api
     ports:
       - "8000:8000"
     env_file:
@@ -9,7 +9,7 @@ services:
     depends_on:
       - jaeger
     volumes:
-      - .:/app          # mount entire project root, not just src
+      - .:/app
     
   jaeger:
     image: jaegertracing/all-in-one:latest
