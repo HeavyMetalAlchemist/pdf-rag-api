@@ -187,3 +187,7 @@ S3 Vectors:
 Bedrock:
 - bedrock:InvokeModel for Amazon Titan Text v2
 - bedrock:InvokeModel for Anthropic Claude Sonnet
+
+## License
+
+MIT
