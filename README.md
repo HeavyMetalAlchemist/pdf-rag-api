@@ -1,4 +1,4 @@
-# pdf-rag-api
+# PDF RAG API
 
 A REST API for PDF document ingestion and grounded question answering. Upload PDFs, ask natural language questions, and get answers grounded strictly in the document content with page-level citations.
 
