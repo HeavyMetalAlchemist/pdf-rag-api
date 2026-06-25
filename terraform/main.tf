@@ -24,7 +24,7 @@ resource "aws_s3_bucket" "documents" {
   }
 
   tags = {
-    Project   = "document-intelligence-api"
+    Project   = "pdf-rag-api"
     ManagedBy = "terraform"
   }
 }
